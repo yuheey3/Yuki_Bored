@@ -13,6 +13,11 @@
 		55579458262F4FDF001DCFF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55579456262F4FDF001DCFF0 /* Main.storyboard */; };
 		5557945A262F4FE0001DCFF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55579459262F4FE0001DCFF0 /* Assets.xcassets */; };
 		5557945D262F4FE0001DCFF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5557945B262F4FE0001DCFF0 /* LaunchScreen.storyboard */; };
+		55579468262F6380001DCFF0 /* BoredModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55579466262F6380001DCFF0 /* BoredModel.xcdatamodeld */; };
+		5557946B262F6C62001DCFF0 /* FavActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557946A262F6C62001DCFF0 /* FavActivity.swift */; };
+		5557947C262F7310001DCFF0 /* BoredTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557947B262F7310001DCFF0 /* BoredTableViewController.swift */; };
+		5557947F262F7461001DCFF0 /* BoredCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557947E262F7461001DCFF0 /* BoredCell.swift */; };
+		55579484262F76DA001DCFF0 /* BoredFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55579483262F76DA001DCFF0 /* BoredFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		55579459262F4FE0001DCFF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5557945C262F4FE0001DCFF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5557945E262F4FE0001DCFF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55579467262F6380001DCFF0 /* Bored.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bored.xcdatamodel; sourceTree = "<group>"; };
+		5557946A262F6C62001DCFF0 /* FavActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavActivity.swift; sourceTree = "<group>"; };
+		5557947B262F7310001DCFF0 /* BoredTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredTableViewController.swift; sourceTree = "<group>"; };
+		5557947E262F7461001DCFF0 /* BoredCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredCell.swift; sourceTree = "<group>"; };
+		55579483262F76DA001DCFF0 /* BoredFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,9 @@
 		5557944F262F4FDF001DCFF0 /* Yuki_Bored */ = {
 			isa = PBXGroup;
 			children = (
+				55579481262F7469001DCFF0 /* view */,
+				5557946D262F705D001DCFF0 /* controller */,
+				55579465262F598E001DCFF0 /* model */,
 				55579450262F4FDF001DCFF0 /* AppDelegate.swift */,
 				55579452262F4FDF001DCFF0 /* SceneDelegate.swift */,
 				55579454262F4FDF001DCFF0 /* ViewController.swift */,
@@ -63,8 +76,34 @@
 				55579459262F4FE0001DCFF0 /* Assets.xcassets */,
 				5557945B262F4FE0001DCFF0 /* LaunchScreen.storyboard */,
 				5557945E262F4FE0001DCFF0 /* Info.plist */,
+				55579466262F6380001DCFF0 /* BoredModel.xcdatamodeld */,
 			);
 			path = Yuki_Bored;
+			sourceTree = "<group>";
+		};
+		55579465262F598E001DCFF0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5557946A262F6C62001DCFF0 /* FavActivity.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5557946D262F705D001DCFF0 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				55579483262F76DA001DCFF0 /* BoredFetcher.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		55579481262F7469001DCFF0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5557947E262F7461001DCFF0 /* BoredCell.swift */,
+				5557947B262F7310001DCFF0 /* BoredTableViewController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5557946B262F6C62001DCFF0 /* FavActivity.swift in Sources */,
 				55579455262F4FDF001DCFF0 /* ViewController.swift in Sources */,
+				55579484262F76DA001DCFF0 /* BoredFetcher.swift in Sources */,
 				55579451262F4FDF001DCFF0 /* AppDelegate.swift in Sources */,
+				5557947F262F7461001DCFF0 /* BoredCell.swift in Sources */,
+				55579468262F6380001DCFF0 /* BoredModel.xcdatamodeld in Sources */,
+				5557947C262F7310001DCFF0 /* BoredTableViewController.swift in Sources */,
 				55579453262F4FDF001DCFF0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +385,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55579466262F6380001DCFF0 /* BoredModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55579467262F6380001DCFF0 /* Bored.xcdatamodel */,
+			);
+			currentVersion = 55579467262F6380001DCFF0 /* Bored.xcdatamodel */;
+			path = BoredModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 55579445262F4FDF001DCFF0 /* Project object */;
 }
