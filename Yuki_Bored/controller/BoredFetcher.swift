@@ -1,7 +1,7 @@
 //
 //  BoredFetcher.swift
 //  Yuki_Bored
-//
+//  Student# : 141082180
 //  Created by Yuki Waka on 2021-04-20.
 //
 

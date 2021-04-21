@@ -1,7 +1,7 @@
 //
 //  BoredTableViewController.swift
 //  Yuki_Bored
-//
+//  Student# : 141082180
 //  Created by Yuki Waka on 2021-04-20.
 //
 
@@ -9,37 +9,76 @@ import UIKit
 
 class BoredTableViewController: UITableViewController {
 
+    private let dbHelper = DatabaseHelper.getInstance()
+    var activityList : [Bored] = [Bored]()
+    
     override func viewDidLoad() {
+        
+        //fetch all the records and display in tableview
+        self.fetchAllActivity()
+        
         super.viewDidLoad()
+        
+        self.tableView.rowHeight = 80
+        self.navigationItem.title = "My Activity"
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return activityList.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell_bored", for: indexPath) as! BoredCell
 
         // Configure the cell...
-
+        if indexPath.row < activityList.count{
+            
+            let favActivity = activityList[indexPath.row]
+            cell.lblActivity.text = favActivity.activity
+       
+        }
         return cell
     }
-    */
+    
+ 
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+        if (indexPath.row < self.activityList.count){
+            //ask for the confirmation first
+
+            self.deleteOrderFromList(indexPath: indexPath)
+        }
+    }
+    
+    private func deleteOrderFromList(indexPath: IndexPath){
+        
+        self.dbHelper.deleteActivity(activityID: self.activityList[indexPath.row].id!)
+        self.fetchAllActivity()
+    }
+    
+  
+    
+        private func fetchAllActivity(){
+            if(self.dbHelper.getAllActivity() != nil){
+                self.activityList = self.dbHelper.getAllActivity()!
+                self.tableView.reloadData()
+            }else{
+                print(#function, "No data received from dbHelper")
+            }
+        }
+    
+    
 
     /*
     // Override to support conditional editing of the table view.

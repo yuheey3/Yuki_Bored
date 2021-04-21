@@ -18,6 +18,8 @@
 		5557947C262F7310001DCFF0 /* BoredTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557947B262F7310001DCFF0 /* BoredTableViewController.swift */; };
 		5557947F262F7461001DCFF0 /* BoredCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557947E262F7461001DCFF0 /* BoredCell.swift */; };
 		55579484262F76DA001DCFF0 /* BoredFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55579483262F76DA001DCFF0 /* BoredFetcher.swift */; };
+		5557948B262F8670001DCFF0 /* MyFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557948A262F8670001DCFF0 /* MyFavorite.swift */; };
+		5557948F262F8CF0001DCFF0 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557948E262F8CF0001DCFF0 /* DatabaseHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		5557947B262F7310001DCFF0 /* BoredTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredTableViewController.swift; sourceTree = "<group>"; };
 		5557947E262F7461001DCFF0 /* BoredCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredCell.swift; sourceTree = "<group>"; };
 		55579483262F76DA001DCFF0 /* BoredFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredFetcher.swift; sourceTree = "<group>"; };
+		5557948A262F8670001DCFF0 /* MyFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavorite.swift; sourceTree = "<group>"; };
+		5557948E262F8CF0001DCFF0 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				5557946A262F6C62001DCFF0 /* FavActivity.swift */,
+				5557948A262F8670001DCFF0 /* MyFavorite.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				55579483262F76DA001DCFF0 /* BoredFetcher.swift */,
+				5557948E262F8CF0001DCFF0 /* DatabaseHelper.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -181,6 +187,8 @@
 				55579484262F76DA001DCFF0 /* BoredFetcher.swift in Sources */,
 				55579451262F4FDF001DCFF0 /* AppDelegate.swift in Sources */,
 				5557947F262F7461001DCFF0 /* BoredCell.swift in Sources */,
+				5557948B262F8670001DCFF0 /* MyFavorite.swift in Sources */,
+				5557948F262F8CF0001DCFF0 /* DatabaseHelper.swift in Sources */,
 				55579468262F6380001DCFF0 /* BoredModel.xcdatamodeld in Sources */,
 				5557947C262F7310001DCFF0 /* BoredTableViewController.swift in Sources */,
 				55579453262F4FDF001DCFF0 /* SceneDelegate.swift in Sources */,
